@@ -1,4 +1,4 @@
-/* Ler o número do funcionário (inteiro)
+/* Ler o nome do vendedor
 o número de horas trabalhadas (inteiro)
 o valor por hora (real)
 calcule o salário
@@ -11,6 +11,6 @@ let valorHora = parseFloat(prompt('Digite o salário-hora:'));
 let salário = parseFloat(valorHora * horasTrabalhadas);
 
 alert(`FUNCIONÁRIO = ${funcionario}
-SALÁRIO = R$ ${salário}`);
+SALÁRIO = R$ ${salário.toFixed}`);
 console.log(`FUNCIONÁRIO = ${funcionario}
-SALÁRIO = R$ ${salário}`);
+SALÁRIO = R$ ${salário.toFixed}`);
