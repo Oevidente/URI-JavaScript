@@ -12,3 +12,4 @@ let pesoNota2 = 7.5;
 let media = ((nota1*pesoNota1)+(nota2*pesoNota2))/(pesoNota1+pesoNota2);
 
 console.log('MEDIA =', media);
+alert(`MEDIA = ${media}`);
