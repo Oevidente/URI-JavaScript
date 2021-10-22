@@ -11,6 +11,6 @@ let valorHora = parseFloat(prompt('Digite o salário-hora:'));
 let salário = parseFloat(valorHora * horasTrabalhadas);
 
 alert(`FUNCIONÁRIO = ${funcionario}
-SALÁRIO = R$ ${salário.toFixed}`);
+SALÁRIO = R$ ${salário.toFixed(2)}`);
 console.log(`FUNCIONÁRIO = ${funcionario}
-SALÁRIO = R$ ${salário.toFixed}`);
+SALÁRIO = R$ ${salário.toFixed(2)}`);
