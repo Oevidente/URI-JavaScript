@@ -2,16 +2,18 @@
 2 strings
 2 floats
 resultado.toFixed(4) */
-let p1 = {
-    x1: parseFloat(prompt('Qual o valor de X1?')),
-    y1: parseFloat(prompt('Qual o valor de Y1?'))
-};
+let input = require('fs').readFileSync('Iniciante/1015/stdin', 'utf8');
+let lines = input.split('\n');
+let linha1 = lines.shift().split(' ');
+let linha2 = lines.shift().split(' ');
 
-let p2 = {
-    x2: parseFloat(prompt('Qual o valor de X2?')),
-    y2: parseFloat(prompt('Qual o valor de Y2?'))
-};
-let calculoBase = ((p2.x2 - p1.x1) ** 2) + ((p2.y2 - p1.y1) ** 2);
+let x1 = parseFloat(linha1[0]);
+let y1 = parseFloat(linha1[1]);
+
+let x2 = parseFloat(linha2[0]);
+let y2 = parseFloat(linha2[1]);
+
+let calculoBase = ((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1));
 let distancia = Math.sqrt(calculoBase);
 //Math.sqrt(valor); retorna a raiz quadrada daquele valor
-alert(distancia.toFixed(4));
+console.log(distancia.toFixed(4));

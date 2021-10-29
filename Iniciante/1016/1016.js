@@ -1,6 +1,8 @@
-let distancia = parseInt(prompt('Qual a distância entre os carros? \n*Em Km'));
+let input = require('fs').readFileSync('Iniciante/1016/stdin', 'utf8');
+let lines = input.split('\n');
+
+let distancia = parseInt(lines.shift());
 
 let minutos = distancia*2;
 
-alert(`${minutos} minutos`);
-
+console.log(`${minutos} minutos`);

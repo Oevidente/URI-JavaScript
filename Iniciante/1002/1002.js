@@ -1,6 +1,10 @@
+let input = require('fs').readFileSync('stdin', 'utf8');
+let lines = input.split('\n').map(item => parseFloat(item));
+// lines.shift()
+
 const pi =3.14159;
 //função parseFloat transforma strings em números reais
-let raio = parseFloat(prompt('Digita o raio da circunferência aí man!'));
+let r = lines.shift();
 // ** = potenciação 
-let area = raio**2*pi;
-prompt(`Área = ${area}`);
+let res = (r*r*pi).toFixed(4);
+console.log(`A=${res}`);

@@ -1,24 +1,32 @@
-/* Ler o código da peça1
-a quantidade de peça1
-o valor de cada peça1
-e o mesmo com a peça2
+/* Ler o código da peca1
+a quantidade de peca1
+o valor de cada peca1
+e o mesmo com a peca2
 Calcule o total a ser pago */
+let input = require('fs').readFileSync('Iniciante/1010/stdin', 'utf8');
+let lines = input.split('\n');
 
-let peça1 = [
-    código = parseInt(prompt('Digite o código da peça 1')),
-    quantidade = parseInt(prompt('Digite a quantidade da peça 1')),
-    valor = parseFloat(prompt('Digite o valor da peça1 (uni):'))
-];
-let peça2 = [
-    código = parseInt(prompt('Digite o código da peça 2')),
-    quantidade = parseInt(prompt('Digite a quantidade peça 2')),
-    valor = parseFloat(prompt('Digite o valor da peça 2 (uni):'))
-];
+let line1 = lines.shift().split(' ');
 
-let totalPeça1 = peça1[2] * peça1[1];
-let totalPeça2 = peça2[2] * peça2[1];
+let line2 = lines.shift().split(' ');
 
-let totalPagar = totalPeça1+totalPeça2;
+let IdItemUm = line1[0];
 
-alert(`TOTAL A PAGAR = R$${totalPagar.toFixed(2)}`);
-console.log(`TOTAL A PAGAR = R$${totalPagar.toFixed(2)}`);
+let numPecaUm = line1[1];
+
+let vlrPecaUm = line1[2];
+
+let IdItemDois = line2[0];
+
+let numPecaDois = line2[1];
+
+let vlrPecaDois = line2[2];
+
+let totalPecaUm = numPecaUm * vlrPecaUm;
+
+let totalPecaDois = numPecaDois * vlrPecaDois;
+
+let total = totalPecaUm + totalPecaDois;
+
+// alert(`VALOR A PAGAR: R$${totalPagar.toFixed(2)}`);
+console.log(`VALOR A PAGAR: R$${total.toFixed(2)}`);

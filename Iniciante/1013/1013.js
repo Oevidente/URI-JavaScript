@@ -1,19 +1,16 @@
 /* Ler 3 valores inteiros
 aponte o maior entre eles
 seguido da mensagem "eh o maior" */
+let input = require('fs').readFileSync('Iniciante/1013/stdin', 'utf8');
+let lines = input.split('\n');
+let linha = lines.shift().split(' ');
 
-let num1 = parseInt(prompt('Digite o primeiro número'));
-let num2 = parseInt(prompt('Digite o segundo número'));
-let num3 = parseInt(prompt('Digite o terceiro número'));
-let resultado;
+let a = parseInt(linha[0]);
+let b = parseInt(linha[1]);
+let c = parseInt(linha[2]);
 
-if (num1 > num2 && num1 > num3) {
-    console.log(num1 + ' eh o maior');
-    prompt(num1 + ' eh o maior');
-} else if (num2 > num3) {
-    console.log(num2 + ' eh o maior');
-    prompt(num2 + ' eh o maior');
-} else {
-    console.log(num3 + ' eh o maior');
-    prompt(num3 + ' eh o maior');
-}
+let result = parseInt((a + b + Math.abs(a - b)) / 2);
+
+let maior = parseInt((result + c + Math.abs(result - c)) / 2);
+
+console.log(`${maior} eh o maior`);

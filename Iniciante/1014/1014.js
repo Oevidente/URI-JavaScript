@@ -3,10 +3,12 @@ a partir da distancia e do gasto
 distancia = int
 gasto = float
 resultado.toFixed(3) km/l */
+let input = require('fs').readFileSync('Iniciante/1014/stdin', 'utf8');
+let lines = input.split('\n');
 
-let x = parseInt(prompt('Diga a distância percorrida em Km:'));
-let y = parseFloat(prompt('Diga o combustível gasto em litros:'));
+let x = parseInt(lines.shift());
+let y = parseFloat(lines.shift());
 
 let media = x/y;
 
-alert(`RETÂNGULO: ${media.toFixed(3)} km/l`);
+console.log(`${media.toFixed(3)} km/l`);

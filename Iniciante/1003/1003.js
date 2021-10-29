@@ -1,9 +1,9 @@
-let input = require('fs').readFileSync('stdin', 'utf8');
-let linhas = input.split(' ').map(item => parseInt(item));
+let input = require('fs').readFileSync('Iniciante/1003/stdin', 'utf8');
+let lines = input.split('\n');
 
-let A = linhas[0];
+let A = parseInt(lines.shift());
 
-let B = linhas[1];
+let B = parseInt(lines.shift());
 
 let soma = A + B;
 

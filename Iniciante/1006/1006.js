@@ -13,5 +13,5 @@ let pesoNota3 = 5;
 
 let media = ((nota1*pesoNota1)+(nota2*pesoNota2)+(nota3*pesoNota3))/(pesoNota1+pesoNota2+pesoNota3);
 
-console.log('MEDIA =', media);
-alert(`MEDIA = ${media}`);
+console.log('MEDIA =', media.toFixed(1));
+alert(`MEDIA = ${media.toFixed(1)}`);

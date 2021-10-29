@@ -4,13 +4,16 @@ o valor por hora (real)
 calcule o salário
 Imprima o número do funcionário
 e resultado em numero REAL com R$ */
-let funcionario = parseInt(prompt('Digite o número do funcionário:'));
-let horasTrabalhadas = parseInt(prompt('Digite a quantidade de horas trabalhadas:'));
-let valorHora = parseFloat(prompt('Digite o salário-hora:'));
+let input = require('fs').readFileSync('stdin', 'utf8');
+let lines = input.split('\n');
 
-let salário = parseFloat(valorHora * horasTrabalhadas);
+let funcionario = parseInt(lines.shift());
+let horasTrabalhadas = parseInt(lines.shift());
+let valorHora = parseFloat(lines.shift());
 
-alert(`FUNCIONÁRIO = ${funcionario}
-SALÁRIO = R$ ${salário.toFixed(2)}`);
-console.log(`FUNCIONÁRIO = ${funcionario}
-SALÁRIO = R$ ${salário.toFixed(2)}`);
+let salario = parseFloat(valorHora * horasTrabalhadas);
+
+// alert(`NUMBER = ${funcionario}
+// SALARY = R$ ${salario.toFixed(2)}`);
+console.log(`NUMBER = ${funcionario}
+SALARY = U$ ${salario.toFixed(2)}`);

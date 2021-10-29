@@ -5,12 +5,17 @@ calcule a comissão de 15%
 calcule o salário fixo + comissão
 Imprima "TOTAL =" salário
 e resultado em numero REAL com R$ */
-let vendedor = prompt('Digite o nome do vendedor:');
-let salarioFixo = parseFloat(prompt('Digite o salário fixo:'));
-let vendas = parseFloat(prompt('Digite o montante em vendas:'));
-let comissão = vendas * (15/100); /*versão que fiz de cabeça*/
+let input = require('fs').readFileSync('stdin', 'utf8');
+let lines = input.split('\n');
 
-let salárioTotal = salarioFixo + comissão;
+const porcentagem = (15/100);
 
-alert(`TOTAL = R$ ${salárioTotal.toFixed(2)}`);
+let vendedor = lines.shift();
+let salarioFixo = parseFloat(lines.shift());
+let vendas = parseFloat(lines.shift());
+let comissao = vendas * porcentagem; /*versão que fiz de cabeça*/
+
+let salárioTotal = salarioFixo + comissao;
+
+// alert(`TOTAL = R$ ${salárioTotal.toFixed(2)}`);
 console.log(`TOTAL = R$ ${salárioTotal.toFixed(2)}`);
