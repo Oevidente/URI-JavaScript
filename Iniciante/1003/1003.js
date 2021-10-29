@@ -1,4 +1,10 @@
-let a = parseInt(prompt('Digite o primeiro número'));
-let b = parseInt(prompt('Digite o segundo número'));
-let soma = a + b;
-alert('SOMA = '+soma);
+let input = require('fs').readFileSync('stdin', 'utf8');
+let linhas = input.split(' ').map(item => parseInt(item));
+
+let A = linhas[0];
+
+let B = linhas[1];
+
+let soma = A + B;
+
+console.log('SOMA = ' + soma);
